@@ -1,0 +1,6 @@
+{
+  "name": "StyleSync — AI Digital Wardrobe",
+  "description": "Personal AI fashion assistant and digital wardrobe powered by Google Gemma, SQLite, and live Open-Meteo weather.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

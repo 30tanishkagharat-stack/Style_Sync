@@ -1,0 +1,313 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId && request.auth.token.email_verified == true;
+    }
+
+    function isValidUserPrivateProfile(data) {
+      return data.keys().hasAll([
+          'uid',
+          'email',
+          'displayName',
+          'gender',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'uid',
+          'email',
+          'displayName',
+          'gender',
+          'stylePreferences',
+          'preferredColors',
+          'avoidColors',
+          'fitPreference',
+          'bio',
+          'preferredCity',
+          'temperatureUnit',
+          'createdAt',
+          'updatedAt'
+        ])
+        && isValidId(data.uid)
+        && data.uid == request.auth.uid
+        && data.email is string && data.email.size() >= 3 && data.email.size() <= 254
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 100
+        && data.gender is string && data.gender.size() <= 16 && (data.gender == 'female' || data.gender == 'male')
+        && (!('stylePreferences' in data) || (data.stylePreferences is string && data.stylePreferences.size() <= 300))
+        && (!('preferredColors' in data) || (data.preferredColors is string && data.preferredColors.size() <= 300))
+        && (!('avoidColors' in data) || (data.avoidColors is string && data.avoidColors.size() <= 300))
+        && (!('fitPreference' in data) || (data.fitPreference is string && data.fitPreference.size() <= 120))
+        && (!('bio' in data) || (data.bio is string && data.bio.size() <= 500))
+        && (!('preferredCity' in data) || (data.preferredCity is string && data.preferredCity.size() <= 120))
+        && (!('temperatureUnit' in data) || (data.temperatureUnit is string && data.temperatureUnit.size() <= 4 && (data.temperatureUnit == 'C' || data.temperatureUnit == 'F')))
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidWardrobeItem(data) {
+      return data.keys().hasAll([
+          'uid',
+          'localId',
+          'name',
+          'category',
+          'color',
+          'wearCount',
+          'isFavourite',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'uid',
+          'localId',
+          'name',
+          'category',
+          'targetGender',
+          'color',
+          'secondaryColor',
+          'pattern',
+          'style',
+          'season',
+          'notes',
+          'imagePath',
+          'wearCount',
+          'isFavourite',
+          'createdAt',
+          'updatedAt'
+        ])
+        && isValidId(data.uid)
+        && data.uid == request.auth.uid
+        && data.localId is int && data.localId >= 1
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 140
+        && data.category is string && data.category.size() <= 32
+        && data.category in ['tops', 'bottoms', 'dresses', 'outerwear', 'shoes', 'accessories']
+        && (!('targetGender' in data) || (data.targetGender is string && data.targetGender.size() <= 16 && data.targetGender in ['unisex', 'female', 'male']))
+        && data.color is string && data.color.size() >= 1 && data.color.size() <= 60
+        && (!('secondaryColor' in data) || (data.secondaryColor is string && data.secondaryColor.size() <= 60))
+        && (!('pattern' in data) || (data.pattern is string && data.pattern.size() <= 60))
+        && (!('style' in data) || (data.style is string && data.style.size() <= 80))
+        && (!('season' in data) || (data.season is string && data.season.size() <= 32 && data.season in ['All-Season', 'Spring', 'Summer', 'Autumn', 'Winter']))
+        && (!('notes' in data) || (data.notes is string && data.notes.size() <= 500))
+        && (!('imagePath' in data) || (data.imagePath is string && data.imagePath.size() <= 512))
+        && data.wearCount is int && data.wearCount >= 0
+        && data.isFavourite is bool
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidOutfitRecord(data) {
+      return data.keys().hasAll([
+          'uid',
+          'localId',
+          'name',
+          'occasion',
+          'source',
+          'itemIds',
+          'wearCount',
+          'isFavourite',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'uid',
+          'localId',
+          'name',
+          'occasion',
+          'reasoning',
+          'source',
+          'weatherContext',
+          'itemIds',
+          'wearCount',
+          'isFavourite',
+          'createdAt',
+          'updatedAt'
+        ])
+        && isValidId(data.uid)
+        && data.uid == request.auth.uid
+        && data.localId is int && data.localId >= 1
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 140
+        && data.occasion is string && data.occasion.size() >= 1 && data.occasion.size() <= 80
+        && (!('reasoning' in data) || (data.reasoning is string && data.reasoning.size() <= 600))
+        && data.source is string && data.source.size() <= 32 && data.source in ['gemma', 'local-fallback', 'manual']
+        && (!('weatherContext' in data) || (data.weatherContext is string && data.weatherContext.size() <= 200))
+        && data.itemIds is list && data.itemIds.size() <= 20 && (data.itemIds.size() == 0 || data.itemIds[0] is int)
+        && data.wearCount is int && data.wearCount >= 0
+        && data.isFavourite is bool
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidCalendarPlan(data) {
+      return data.keys().hasAll([
+          'uid',
+          'localId',
+          'plannedDate',
+          'title',
+          'occasion',
+          'itemIds',
+          'createdAt',
+          'updatedAt'
+        ])
+        && data.keys().hasOnly([
+          'uid',
+          'localId',
+          'plannedDate',
+          'title',
+          'occasion',
+          'notes',
+          'itemIds',
+          'createdAt',
+          'updatedAt'
+        ])
+        && isValidId(data.uid)
+        && data.uid == request.auth.uid
+        && data.localId is int && data.localId >= 1
+        && data.plannedDate is string && data.plannedDate.size() == 10 && data.plannedDate.matches('^\\d{4}-\\d{2}-\\d{2}$')
+        && data.title is string && data.title.size() >= 1 && data.title.size() <= 140
+        && data.occasion is string && data.occasion.size() >= 1 && data.occasion.size() <= 80
+        && (!('notes' in data) || (data.notes is string && data.notes.size() <= 500))
+        && data.itemIds is list && data.itemIds.size() <= 20 && (data.itemIds.size() == 0 || data.itemIds[0] is int)
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    match /users/{userId}/private/{docId} {
+      allow get: if isValidId(userId) && isValidId(docId) && docId == 'profile' && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+      allow list: if false;
+      allow create: if isValidId(userId) && isValidId(docId) && docId == 'profile' && isVerifiedOwner(userId)
+        && isValidUserPrivateProfile(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidUserPrivateProfile(incoming())
+        && isValidId(userId) && isValidId(docId) && docId == 'profile' && isVerifiedOwner(userId)
+        && incoming().uid == existing().uid
+        && incoming().email == existing().email
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'displayName',
+          'gender',
+          'stylePreferences',
+          'preferredColors',
+          'avoidColors',
+          'fitPreference',
+          'bio',
+          'preferredCity',
+          'temperatureUnit',
+          'updatedAt'
+        ]);
+      allow delete: if isValidId(userId) && isValidId(docId) && docId == 'profile' && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+    }
+
+    match /users/{userId}/wardrobe/{itemId} {
+      allow get: if isValidId(userId) && isValidId(itemId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+      allow list: if isValidId(userId) && isVerifiedOwner(userId) && existing().uid == request.auth.uid;
+      allow create: if isValidId(userId) && isValidId(itemId) && isVerifiedOwner(userId)
+        && isValidWardrobeItem(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidWardrobeItem(incoming())
+        && isValidId(userId) && isValidId(itemId) && isVerifiedOwner(userId)
+        && incoming().uid == existing().uid
+        && incoming().localId == existing().localId
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          incoming().diff(existing()).affectedKeys().hasOnly(['isFavourite', 'updatedAt'])
+          || incoming().diff(existing()).affectedKeys().hasOnly(['wearCount', 'updatedAt'])
+          || incoming().diff(existing()).affectedKeys().hasOnly([
+            'name',
+            'category',
+            'targetGender',
+            'color',
+            'secondaryColor',
+            'pattern',
+            'style',
+            'season',
+            'notes',
+            'imagePath',
+            'wearCount',
+            'isFavourite',
+            'updatedAt'
+          ])
+        );
+      allow delete: if isValidId(userId) && isValidId(itemId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+    }
+
+    match /users/{userId}/outfits/{outfitId} {
+      allow get: if isValidId(userId) && isValidId(outfitId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+      allow list: if isValidId(userId) && isVerifiedOwner(userId) && existing().uid == request.auth.uid;
+      allow create: if isValidId(userId) && isValidId(outfitId) && isVerifiedOwner(userId)
+        && isValidOutfitRecord(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidOutfitRecord(incoming())
+        && isValidId(userId) && isValidId(outfitId) && isVerifiedOwner(userId)
+        && incoming().uid == existing().uid
+        && incoming().localId == existing().localId
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          incoming().diff(existing()).affectedKeys().hasOnly(['isFavourite', 'updatedAt'])
+          || incoming().diff(existing()).affectedKeys().hasOnly(['wearCount', 'updatedAt'])
+          || incoming().diff(existing()).affectedKeys().hasOnly([
+            'name',
+            'occasion',
+            'reasoning',
+            'source',
+            'weatherContext',
+            'itemIds',
+            'wearCount',
+            'isFavourite',
+            'updatedAt'
+          ])
+        );
+      allow delete: if isValidId(userId) && isValidId(outfitId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+    }
+
+    match /users/{userId}/calendar/{entryId} {
+      allow get: if isValidId(userId) && isValidId(entryId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+      allow list: if isValidId(userId) && isVerifiedOwner(userId) && existing().uid == request.auth.uid;
+      allow create: if isValidId(userId) && isValidId(entryId) && isVerifiedOwner(userId)
+        && isValidCalendarPlan(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidCalendarPlan(incoming())
+        && isValidId(userId) && isValidId(entryId) && isVerifiedOwner(userId)
+        && incoming().uid == existing().uid
+        && incoming().localId == existing().localId
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'plannedDate',
+          'title',
+          'occasion',
+          'notes',
+          'itemIds',
+          'updatedAt'
+        ]);
+      allow delete: if isValidId(userId) && isValidId(entryId) && isVerifiedOwner(userId) && (resource == null || existing().uid == request.auth.uid);
+    }
+  }
+}

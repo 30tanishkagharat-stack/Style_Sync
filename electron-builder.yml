@@ -1,0 +1,35 @@
+appId: com.stylesync.desktop
+productName: StyleSync
+copyright: Copyright © 2026 StyleSync
+directories:
+  output: release
+files:
+  - dist/**/*
+  - dist-server/**/*
+  - electron/**/*
+  - firebase-applet-config.json
+  - src/assets/images/**/*
+  - package.json
+asarUnpack:
+  - node_modules/better-sqlite3/**/*
+mac:
+  category: public.app-category.lifestyle
+  icon: electron/icon.png
+  target:
+    - dmg
+    - zip
+win:
+  icon: electron/icon.png
+  target:
+    - nsis
+    - portable
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+linux:
+  icon: electron/icon.png
+  category: Utility
+  target:
+    - AppImage

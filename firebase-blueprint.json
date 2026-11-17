@@ -1,0 +1,318 @@
+{
+  "entities": {
+    "UserPrivateProfile": {
+      "title": "UserPrivateProfile",
+      "description": "Private user profile, styling preferences, and weather settings isolated per authenticated user.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Firebase Authentication user UID"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 254,
+          "description": "Verified account email address"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "User display name"
+        },
+        "gender": {
+          "type": "string",
+          "enum": ["female", "male"],
+          "maxLength": 16,
+          "description": "Styling profile gender option"
+        },
+        "stylePreferences": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "Comma-separated aesthetic preferences"
+        },
+        "preferredColors": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "Preferred garment colors"
+        },
+        "avoidColors": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "Colors to avoid in outfit recommendations"
+        },
+        "fitPreference": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Preferred garment silhouette and fit"
+        },
+        "bio": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Short personal wardrobe bio"
+        },
+        "preferredCity": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Saved city for live weather"
+        },
+        "temperatureUnit": {
+          "type": "string",
+          "enum": ["C", "F"],
+          "maxLength": 4,
+          "description": "Temperature display unit"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp"
+        }
+      },
+      "required": [
+        "uid",
+        "email",
+        "displayName",
+        "gender",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "WardrobeItem": {
+      "title": "WardrobeItem",
+      "description": "A garment catalogued in the user's digital wardrobe.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "localId": {
+          "type": "integer",
+          "description": "Local SQLite item identifier"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "category": {
+          "type": "string",
+          "enum": ["tops", "bottoms", "dresses", "outerwear", "shoes", "accessories"],
+          "maxLength": 32
+        },
+        "targetGender": {
+          "type": "string",
+          "enum": ["unisex", "female", "male"],
+          "maxLength": 16
+        },
+        "color": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "secondaryColor": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "pattern": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "style": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "season": {
+          "type": "string",
+          "enum": ["All-Season", "Spring", "Summer", "Autumn", "Winter"],
+          "maxLength": 32
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "imagePath": {
+          "type": "string",
+          "maxLength": 512
+        },
+        "wearCount": {
+          "type": "integer"
+        },
+        "isFavourite": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "uid",
+        "localId",
+        "name",
+        "category",
+        "color",
+        "wearCount",
+        "isFavourite",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "OutfitRecord": {
+      "title": "OutfitRecord",
+      "description": "A saved or favourited complete outfit combination.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "localId": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "occasion": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "reasoning": {
+          "type": "string",
+          "maxLength": 600
+        },
+        "source": {
+          "type": "string",
+          "enum": ["gemma", "local-fallback", "manual"],
+          "maxLength": 32
+        },
+        "weatherContext": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "itemIds": {
+          "type": "array",
+          "description": "Bounded list of local garment IDs (max 20 items)"
+        },
+        "wearCount": {
+          "type": "integer"
+        },
+        "isFavourite": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "uid",
+        "localId",
+        "name",
+        "occasion",
+        "source",
+        "itemIds",
+        "wearCount",
+        "isFavourite",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "CalendarPlan": {
+      "title": "CalendarPlan",
+      "description": "A planned future outfit scheduled on the user's wear calendar.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "localId": {
+          "type": "integer"
+        },
+        "plannedDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "maxLength": 10
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "occasion": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "itemIds": {
+          "type": "array",
+          "description": "Bounded list of local garment IDs (max 20 items)"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "uid",
+        "localId",
+        "plannedDate",
+        "title",
+        "occasion",
+        "itemIds",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/UserPrivateProfile" },
+      "description": "Private user styling profile, email PII, and weather preferences."
+    },
+    "/users/{userId}/wardrobe/{itemId}": {
+      "schema": { "$ref": "#/entities/WardrobeItem" },
+      "description": "User's cloud-synced digital wardrobe garments."
+    },
+    "/users/{userId}/outfits/{outfitId}": {
+      "schema": { "$ref": "#/entities/OutfitRecord" },
+      "description": "User's cloud-synced outfits and favourite looks."
+    },
+    "/users/{userId}/calendar/{entryId}": {
+      "schema": { "$ref": "#/entities/CalendarPlan" },
+      "description": "User's cloud-synced future outfit calendar plans."
+    }
+  }
+}

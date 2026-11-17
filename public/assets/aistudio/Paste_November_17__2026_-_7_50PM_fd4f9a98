@@ -1,0 +1,388 @@
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/parser@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/parser@8.73.0
+npm warn node_modules/@typescript-eslint/parser
+npm warn   @typescript-eslint/parser@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/parser@8.73.0
+npm warn   node_modules/@typescript-eslint/parser
+npm warn     @typescript-eslint/parser@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn     node_modules/@typescript-eslint/rule-tester
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/project-service@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/project-service@8.73.0
+npm warn node_modules/@typescript-eslint/project-service
+npm warn   @typescript-eslint/project-service@"8.73.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn   node_modules/@typescript-eslint/typescript-estree
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/project-service@8.73.0
+npm warn   node_modules/@typescript-eslint/project-service
+npm warn     @typescript-eslint/project-service@"8.73.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/rule-tester@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn node_modules/@typescript-eslint/rule-tester
+npm warn   @typescript-eslint/rule-tester@"^8.57.2" from @firebase/eslint-plugin-security-rules@0.0.2
+npm warn   node_modules/@firebase/eslint-plugin-security-rules
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn     @typescript-eslint/rule-tester@"^8.57.2" from @firebase/eslint-plugin-security-rules@0.0.2
+npm warn     node_modules/@firebase/eslint-plugin-security-rules
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/tsconfig-utils@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/tsconfig-utils@8.73.0
+npm warn node_modules/@typescript-eslint/tsconfig-utils
+npm warn   @typescript-eslint/tsconfig-utils@"^8.73.0" from @typescript-eslint/project-service@8.73.0
+npm warn   node_modules/@typescript-eslint/project-service
+npm warn   1 more (@typescript-eslint/typescript-estree)
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/tsconfig-utils@8.73.0
+npm warn   node_modules/@typescript-eslint/tsconfig-utils
+npm warn     @typescript-eslint/tsconfig-utils@"^8.73.0" from @typescript-eslint/project-service@8.73.0
+npm warn     node_modules/@typescript-eslint/project-service
+npm warn     1 more (@typescript-eslint/typescript-estree)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/typescript-estree@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn node_modules/@typescript-eslint/typescript-estree
+npm warn   @typescript-eslint/typescript-estree@"8.73.0" from @typescript-eslint/parser@8.73.0
+npm warn   node_modules/@typescript-eslint/parser
+npm warn   2 more (@typescript-eslint/rule-tester, @typescript-eslint/utils)
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn   node_modules/@typescript-eslint/typescript-estree
+npm warn     @typescript-eslint/typescript-estree@"8.73.0" from @typescript-eslint/parser@8.73.0
+npm warn     node_modules/@typescript-eslint/parser
+npm warn     2 more (@typescript-eslint/rule-tester, @typescript-eslint/utils)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/utils@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   dev typescript@"^7.0.2" from the root project
+npm warn   1 more (ts-api-utils)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/utils@8.73.0
+npm warn node_modules/@typescript-eslint/utils
+npm warn   @typescript-eslint/utils@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/utils@8.73.0
+npm warn   node_modules/@typescript-eslint/utils
+npm warn     @typescript-eslint/utils@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn     node_modules/@typescript-eslint/rule-tester
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error Found: esbuild@0.25.12
+npm error node_modules/esbuild
+npm error   dev esbuild@"^0.25.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.8
+npm error node_modules/vite
+npm error   vite@"^8.3.0" from the root project
+npm error   peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.5
+npm error   node_modules/@tailwindcss/vite
+npm error     @tailwindcss/vite@"^4.3.3" from the root project
+npm error   2 more (@vitejs/plugin-react, vite-plugin-pwa)
+npm error
+npm error Conflicting peer dependency: esbuild@0.28.2
+npm error node_modules/tsx/node_modules/esbuild
+npm error   peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.8
+npm error   node_modules/vite
+npm error     vite@"^8.3.0" from the root project
+npm error     peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.5
+npm error     node_modules/@tailwindcss/vite
+npm error       @tailwindcss/vite@"^4.3.3" from the root project
+npm error     2 more (@vitejs/plugin-react, vite-plugin-pwa)
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/tanishkagharat/.npm/_logs/2026-11-17T14_19_39_295Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/tanishkagharat/.npm/_logs/2026-11-17T14_19_39_295Z-debug-0.log
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/parser@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/parser@8.73.0
+npm warn node_modules/@typescript-eslint/parser
+npm warn   @typescript-eslint/parser@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/parser@8.73.0
+npm warn   node_modules/@typescript-eslint/parser
+npm warn     @typescript-eslint/parser@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn     node_modules/@typescript-eslint/rule-tester
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/project-service@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/project-service@8.73.0
+npm warn node_modules/@typescript-eslint/project-service
+npm warn   @typescript-eslint/project-service@"8.73.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn   node_modules/@typescript-eslint/typescript-estree
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/project-service@8.73.0
+npm warn   node_modules/@typescript-eslint/project-service
+npm warn     @typescript-eslint/project-service@"8.73.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/rule-tester@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn node_modules/@typescript-eslint/rule-tester
+npm warn   @typescript-eslint/rule-tester@"^8.57.2" from @firebase/eslint-plugin-security-rules@0.0.2
+npm warn   node_modules/@firebase/eslint-plugin-security-rules
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn     @typescript-eslint/rule-tester@"^8.57.2" from @firebase/eslint-plugin-security-rules@0.0.2
+npm warn     node_modules/@firebase/eslint-plugin-security-rules
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/tsconfig-utils@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/tsconfig-utils@8.73.0
+npm warn node_modules/@typescript-eslint/tsconfig-utils
+npm warn   @typescript-eslint/tsconfig-utils@"^8.73.0" from @typescript-eslint/project-service@8.73.0
+npm warn   node_modules/@typescript-eslint/project-service
+npm warn   1 more (@typescript-eslint/typescript-estree)
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/tsconfig-utils@8.73.0
+npm warn   node_modules/@typescript-eslint/tsconfig-utils
+npm warn     @typescript-eslint/tsconfig-utils@"^8.73.0" from @typescript-eslint/project-service@8.73.0
+npm warn     node_modules/@typescript-eslint/project-service
+npm warn     1 more (@typescript-eslint/typescript-estree)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/typescript-estree@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn node_modules/@typescript-eslint/typescript-estree
+npm warn   @typescript-eslint/typescript-estree@"8.73.0" from @typescript-eslint/parser@8.73.0
+npm warn   node_modules/@typescript-eslint/parser
+npm warn   2 more (@typescript-eslint/rule-tester, @typescript-eslint/utils)
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn   node_modules/@typescript-eslint/typescript-estree
+npm warn     @typescript-eslint/typescript-estree@"8.73.0" from @typescript-eslint/parser@8.73.0
+npm warn     node_modules/@typescript-eslint/parser
+npm warn     2 more (@typescript-eslint/rule-tester, @typescript-eslint/utils)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @typescript-eslint/utils@8.73.0
+npm warn Found: typescript@7.0.2
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4" from ts-api-utils@2.5.0
+npm warn   node_modules/ts-api-utils
+npm warn     ts-api-utils@"^2.5.0" from @typescript-eslint/typescript-estree@8.73.0
+npm warn     node_modules/@typescript-eslint/typescript-estree
+npm warn   1 more (the root project)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/utils@8.73.0
+npm warn node_modules/@typescript-eslint/utils
+npm warn   @typescript-eslint/utils@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn   node_modules/@typescript-eslint/rule-tester
+npm warn
+npm warn Conflicting peer dependency: typescript@6.0.3
+npm warn node_modules/typescript
+npm warn   peer typescript@">=4.8.4 <6.1.0" from @typescript-eslint/utils@8.73.0
+npm warn   node_modules/@typescript-eslint/utils
+npm warn     @typescript-eslint/utils@"8.73.0" from @typescript-eslint/rule-tester@8.73.0
+npm warn     node_modules/@typescript-eslint/rule-tester
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error Found: esbuild@0.25.12
+npm error node_modules/esbuild
+npm error   dev esbuild@"^0.25.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.8
+npm error node_modules/vite
+npm error   peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.5
+npm error   node_modules/@tailwindcss/vite
+npm error     @tailwindcss/vite@"^4.3.3" from the root project
+npm error   peer vite@"^8.0.0" from @vitejs/plugin-react@6.3.0
+npm error   node_modules/@vitejs/plugin-react
+npm error     @vitejs/plugin-react@"^6.1.1" from the root project
+npm error   2 more (vite-plugin-pwa, the root project)
+npm error
+npm error Conflicting peer dependency: esbuild@0.28.2
+npm error node_modules/tsx/node_modules/esbuild
+npm error   peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.8
+npm error   node_modules/vite
+npm error     peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.5
+npm error     node_modules/@tailwindcss/vite
+npm error       @tailwindcss/vite@"^4.3.3" from the root project
+npm error     peer vite@"^8.0.0" from @vitejs/plugin-react@6.3.0
+npm error     node_modules/@vitejs/plugin-react
+npm error       @vitejs/plugin-react@"^6.1.1" from the root project
+npm error     2 more (vite-plugin-pwa, the root project)
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/tanishkagharat/.npm/_logs/2026-11-17T14_19_41_567Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/tanishkagharat/.npm/_logs/2026-11-17T14_19_41_567Z-debug-0.log
+
+> stylesync-desktop@1.0.0 desktop:mac
+> npm run build:desktop && electron-builder --mac
+
+
+> stylesync-desktop@1.0.0 build:desktop
+> npm run build && npm run build:server
+
+
+> stylesync-desktop@1.0.0 build
+> vite build
+
+vite v8.3.8 building client environment for production...
+✓ 1698 modules transformed.
+computing gzip size...
+dist/registerSW.js                                              0.13 kB
+dist/manifest.webmanifest                                       0.56 kB
+dist/index.html                                                 1.97 kB │ gzip:   0.81 kB
+dist/assets/wardrobe_camel_trench_1794629023997-D31ETSXu.jpg  738.58 kB
+dist/assets/index-5K07slL_.css                                 84.08 kB │ gzip:  17.01 kB
+dist/assets/index-DM9J5TiQ.js                                 963.13 kB │ gzip: 276.19 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.43s
+
+PWA v2.0.0
+mode      generateSW
+precache  15 entries (1096.12 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-835c8c05.js
+
+> stylesync-desktop@1.0.0 build:server
+> esbuild server.ts --bundle --platform=node --format=cjs --packages=external --outfile=dist-server/server.cjs
+
+
+  dist-server/server.cjs  120.4kb
+
+⚡ Done in 9ms
+  • electron-builder  version=26.18.0 os=25.6.0
+  • loaded configuration  file=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2/electron-builder.yml
+  • author is missed in the package.json  appPackageFile=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2/package.json
+  • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=npm detected=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2
+  • writing effective config  file=release/builder-effective-config.yaml
+  • executing @electron/rebuild  electronVersion=45.3.3 arch=arm64 buildFromSource=false workspaceRoot=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2 projectDir=./ appDir=./
+  • installing native dependencies  arch=arm64
+  • preparing       moduleName=better-sqlite3 arch=arm64
+  • finished        moduleName=better-sqlite3 arch=arm64
+  • completed installing native dependencies
+  • packaging       platform=darwin arch=arm64 electron=45.3.3 appOutDir=release/mac-arm64
+  • downloading     label=electron
+    [====================================================================================================] 100% | electron
+  • downloaded electron zip extracted successfully  output=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2/release/mac-arm64
+  • searching for node modules  pm=npm searchDir=/Users/tanishkagharat/Downloads/stylesync-—-ai-digital-wardrobe 2
+  • duplicate dependency references  dependencies=["@typescript-eslint/visitor-keys@8.73.0","@typescript-eslint/typescript-estree@8.73.0","debug@4.4.3","eslint@10.15.0","typescript@7.0.2","debug@4.4.3","typescript@7.0.2","typescript@7.0.2","@typescript-eslint/visitor-keys@8.73.0","debug@4.4.3","minimatch@11.0.9","tinyglobby@0.2.17","typescript@7.0.2","typescript@7.0.2","@eslint-community/eslint-utils@4.10.1","@typescript-eslint/scope-manager@8.73.0","@typescript-eslint/typescript-estree@8.73.0","eslint@10.15.0","typescript@7.0.2","ajv@6.15.0","eslint@10.15.0","debug@4.4.3","fetch-blob@3.2.0","gaxios@7.3.1","ecdsa-sig-formatter@1.0.11","@types/node@22.20.5","@jridgewell/trace-mapping@0.3.31","lightningcss@1.33.0","@emnapi/wasi-threads@1.2.3","@emnapi/core@1.11.3","@emnapi/runtime@1.11.3","@tybys/wasm-util@0.10.3","vite@8.3.8","@types/node@22.20.5","@types/node@22.20.5","@types/node@22.20.5","@types/node@22.20.5","@types/node@22.20.5","@types/node@22.20.5","vite@8.3.8","eslint@10.15.0","debug@4.4.3","minimatch@11.0.9","@eslint/core@1.2.1","@eslint/core@1.2.1","type-check@0.4.0","@cacheable/utils@2.5.0","hashery@1.5.1","keyv@5.6.0","keyv@5.6.0","keyv@5.6.0","is-glob@4.0.3","levn@0.4.1","http-errors@2.0.1","on-finished@2.4.2","qs@6.16.2","http-errors@2.0.1","iconv-lite@0.4.24","type-is@1.6.18","on-finished@2.4.2","get-intrinsic@1.3.0","call-bind-apply-helpers@1.0.2","call-bind-apply-helpers@1.0.2","es-object-atoms@1.1.2","call-bound@1.0.4","get-intrinsic@1.3.0","side-channel-map@1.0.1","http-errors@2.0.1","on-finished@2.4.2","send@0.19.2","mime-types@2.1.35","@firebase/app-types@0.9.6","@firebase/app@0.16.7","@firebase/util@1.15.3","@firebase/util@1.15.3","@firebase/analytics@0.10.26","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/installations@0.6.24","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-check@0.13.2","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/logger@0.5.2","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/app-types@0.9.6","@firebase/util@1.15.3","@firebase/auth@1.13.11","@firebase/component@0.7.5","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-types@0.9.6","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/installations@0.6.24","@firebase/util@1.15.3","@opentelemetry/api-logs@0.223.0","@opentelemetry/otlp-exporter-base@0.301.2","@opentelemetry/otlp-transformer@0.301.2","@opentelemetry/sdk-logs@3.1.1","@opentelemetry/otlp-exporter-base@0.301.2","@opentelemetry/otlp-transformer@0.301.2","@opentelemetry/sdk-trace@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/instrumentation@0.301.2","@opentelemetry/core@3.1.1","@opentelemetry/sdk-logs@3.1.1","@opentelemetry/sdk-trace@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/instrumentation@0.301.2","@opentelemetry/web-common@0.301.2","@opentelemetry/core@3.1.1","@opentelemetry/instrumentation@0.301.2","@opentelemetry/web-common@0.301.2","debug@4.4.3","@opentelemetry/core@3.1.1","@opentelemetry/otlp-transformer@0.301.2","@opentelemetry/core@3.1.1","@opentelemetry/resources@3.1.1","@opentelemetry/sdk-logs@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/resources@3.1.1","@opentelemetry/sdk-trace@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/resources@3.1.1","@opentelemetry/core@3.1.1","@opentelemetry/resources@3.1.1","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/app-types@0.9.6","@firebase/util@1.15.3","@firebase/database@1.1.6","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/app-types@0.9.6","@firebase/util@1.15.3","@firebase/firestore@4.20.0","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/util@1.15.3","@grpc/proto-loader@0.7.15","@types/node@22.20.5","protobufjs@7.6.6","string-width@4.2.3","string-width@4.2.3","strip-ansi@6.0.1","strip-ansi@6.0.1","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/functions@0.14.0","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/app-types@0.9.6","@firebase/installations@0.6.24","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/messaging@0.13.3","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/installations@0.6.24","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/performance@0.7.14","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/installations@0.6.24","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/logger@0.5.2","@firebase/remote-config@0.10.0","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/installations@0.6.24","@firebase/logger@0.5.2","@firebase/util@1.15.3","@firebase/app-compat@0.5.23","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/app-types@0.9.6","@firebase/util@1.15.3","@firebase/storage@0.14.6","@firebase/util@1.15.3","@firebase/app@0.16.7","@firebase/component@0.7.5","@firebase/util@1.15.3","react-dom@19.3.1","react-dom@19.3.1","type-is@1.6.18","@types/node@22.20.5","@jridgewell/gen-mapping@0.3.13","@jridgewell/trace-mapping@0.3.31"]
+  • skipped macOS application code signing  reason=cannot find valid "Developer ID Application" identity or custom non-Apple code signing certificate, it could cause some undefined behaviour, e.g. macOS localized description not visible, see https://electron.build/code-signing allIdentities=     0 identities found
+                                                Valid identities only
+     0 valid identities found
+  • building        target=macOS zip arch=arm64 file=release/StyleSync-1.0.0-arm64-mac.zip
+  • building        target=DMG arch=arm64 file=release/StyleSync-1.0.0-arm64.dmg
+  • building block map  blockMapFile=release/StyleSync-1.0.0-arm64.dmg.blockmap
+
